@@ -1,0 +1,28 @@
+<?php
+$mysql_host = "localhost";
+$mysql_db = "pon";
+$mysql_user = "pon";
+$mysql_pass = "pon";
+
+
+
+$telnet_user = "admin";
+$telnet_pass = "admin";
+//При использовании пароля Enable раскомментируйте следующую строчку и укажите используемый пароль
+//$enable_pass = "enablepassword";
+
+
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$use_userside = "no";
+date_default_timezone_set('Europe/Kiev');
+$date = date('Y.m.d H:i:s'); //get current date
+$default_lat = "49.9808";
+$default_lon = "36.2527";
+$left_href2="/";
+$left_href_txt2="Google";
+$left_href3="?page=splitters";
+$left_href_txt3="Splitters";
+$left_href="/";
+$left_href_txt="Internal software";
+?>

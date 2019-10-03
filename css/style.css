@@ -1,0 +1,56 @@
+/*	
+Template Name: Blur Studio
+Description: A stylish ThemeForest Portfolio and Blog Template
+Version: 1.0
+Author: enstyled
+Author URI: http://themeforest.net/user/enstyled
+*/
+
+
+/* Reset */
+* { padding:0; margin:0; outline: none; }
+	
+html { height: 100%; }
+	
+
+a {
+	color: #999;
+	text-decoration: none;
+	}
+
+a.red {
+        color: #ff2222;
+        text-decoration: none;
+        }
+
+
+a.white {
+        color: #FFFFFF;
+        text-decoration: none;
+        }
+
+
+
+a.lightgray {
+        color: #eeeeee;
+        text-decoration: none;
+        }
+
+
+
+
+	
+a:hover {
+	color: #4477dd;
+	text-decoration: none;
+	}	
+
+
+
+
+#chart {
+	background: #cccccc;
+	color: #555555;
+	text-shadow: 0;
+	padding: 10px 30px;
+        }
