@@ -21,7 +21,7 @@
     sleep(1);
 }
 
-    fwrite($con, "show mac a int $nameint \r\n");
+    fwrite($con, "show mac address-table int $nameint \r\n");
     sleep(2);
 $out = fread($con, 16536);
 $out = end(explode(' -----', $out));
