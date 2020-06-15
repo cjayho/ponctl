@@ -30,11 +30,11 @@ while ($row=mysqli_fetch_array($retval)) {
 <br/>
 <br/>
 <form method="post" action="modolt_sql.php?olt=<?=$ip?>">
-IP адрес: <input required name="ip" size=13 type="text" id="ip" value="<?=$ip?>"><br/>
-SNMP ro: <input name="ro" size=13 type="text" id="ro"  value="<?=$ro?>"><br/>
-SNMP rw: <input name="rw" size=13 type="text" id="rw"  value="<?=$rw?>"><br/>
-Место: <input name="place" size=13 type="text" id="place"  value="<?=$place?>"><br/>
-Кол-во PON SFP: <input name="numsfp" size=13 type="text" id="numsfp"  value="<?=$numsfp?>"><br/>
+IP адрес: <input required name="ip" size="13" type="text" id="ip" value="<?=$ip?>"><br/>
+SNMP ro: <input name="ro" size="13" type="text" id="ro"  value="<?=$ro?>"><br/>
+SNMP rw: <input name="rw" size="13" type="text" id="rw"  value="<?=$rw?>"><br/>
+Место: <input name="place" size="13" type="text" id="place"  value="<?=$place?>"><br/>
+Кол-во PON SFP: <input name="numsfp" size="13" type="text" id="numsfp"  value="<?=$numsfp?>"><br/>
 <br/>
 <input name="add" type="submit" id="add" value="Сохранить" style="width:80px">
 </form>

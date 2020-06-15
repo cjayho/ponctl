@@ -28,10 +28,14 @@
 
 	например, при 3 OLT: 
 
-	командой crontab -e заходим в режим редактирования и вписываем следующую строчку:
+	командой crontab -e заходим в режим редактирования и вписываем следующую строчку (для linux):
 
-	#Pon Control
 	*/6 * * * * curl "http://user:password@pon.example.org/pon/ping_all.php"
+	
+	Для FreeBSD:
+	
+	*/6 * * * * fetch "http://user:password@pon.example.org/pon/ping_all.php"
+	
 
 6) Зайти в браузере по адресу установки и добавить свой первый OLT
 	(если snmp community не указаны - будут использоваться стандартные public/private)

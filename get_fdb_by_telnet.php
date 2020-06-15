@@ -13,8 +13,7 @@
     fwrite($con, $command);
 
 
-  if ($enable_pass == NULL) {
-} else {
+  if ($enable_pass != NULL) {
     $enable_password = "$enable_pass";
     $en_pass = $enable_password."\r\n";
     fwrite($con, $en_pass);
@@ -46,40 +45,44 @@ $out_mac = ltrim($out_mac, "0..9");
 $out_mac = trim($out_mac);
 $out_mac = substr($out_mac, -14);
 $us_mac = str_replace(".", "", "$out_mac");
+/*
 $us_mac = str_replace("a", "A", "$us_mac");
 $us_mac = str_replace("b", "B", "$us_mac");
 $us_mac = str_replace("c", "C", "$us_mac");
 $us_mac = str_replace("d", "D", "$us_mac");
 $us_mac = str_replace("e", "E", "$us_mac");
-$us_mac = str_replace("f", "F", "$us_mac");
-if ($us_mac == NULL) {
-} else {
+$us_mac = str_replace("f", "F", "$us_mac");*/ // cjayho: use strtoupper luke!
+
+$us_mac = strtoupper( $us_mac );
+
+if ($us_mac != NULL){
 echo "<tr><td><div style=\"display: table-cell; vertical-align: middle; \">";
 
 $us_formatted_mac = preg_replace('~..(?!$)~', '\0:', $us_mac);
 
 echo $us_formatted_mac;
 echo "</div></td><td>";
-if ($us_mac == NULL) {
-} else if ($us_mac == str_replace(":", "", $mac)) {
-echo "<font color=\"green\">ONU</font></td>";
-if ($use_userside == "yes") {
-echo "<td></td>";
-} else {
-}
-} else if ($use_userside == "yes") {
-include 'get_us_mac_data.php';
-echo $us_mac_out;
-echo "</td><td>";
+if ($us_mac != NULL)
+{
+	if ($us_mac == str_replace(":", "", $mac))
+	{
+		echo "<font color=\"green\">ONU</font></td>";
 
-if ($us_mac_type == 1) {
-echo "<a href=\"fix_onu.php?olt=$ip&mac=$mac&code=$us_usercode\">Закрепить</a>";
-}
-else {
-}
+		if ($use_userside == "yes") {
+			echo "<td></td>";
+		}
+	}
+	else if ($use_userside == "yes") 
+	{
+		include 'get_us_mac_data.php';
+		echo $us_mac_out;
+		echo "</td><td>";
 
-
-} else {
+		if ($us_mac_type == 1) 
+		{
+			echo "<a href=\"fix_onu.php?olt=$ip&mac=$mac&code=$us_usercode\">Закрепить</a>";
+		}
+	}
 }
 echo "</td></tr>";
 }

@@ -26,8 +26,7 @@ $twirl_color = "red";
 $twirl_color = "green";
 }
 
-if ($lat == 0) {
-} else {
+if ($lat != 0) {
 include 'addmark2.php';
 }
 

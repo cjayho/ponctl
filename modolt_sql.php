@@ -12,24 +12,19 @@ $numsfp = $_POST["numsfp"];
 
 if ($ro == NULL) {
 $ro = "public";
-} else {
 }
 
 if ($rw == NULL) {
 $rw = "private";
-} else {
 }
-
 
 
 if ($place == NULL) {
 $place = " ";
-} else {
 }
 
 if ($comm == NULL) {
 $comm = " ";
-} else {
 }
 
 

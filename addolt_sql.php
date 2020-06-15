@@ -11,16 +11,11 @@ $numsfp = $_POST["numsfp"];
 
 if ($ro == NULL) {
 $ro = "public";
-} else {
 }
 
 if ($rw == NULL) {
 $rw = "private";
-} else {
 }
-
-
-
 
 
 if (!filter_var($table, FILTER_VALIDATE_IP))
@@ -35,8 +30,6 @@ $ip_sql = sprintf('%u', ip2long($ip));
 $conn = mysqli_connect($mysql_host, $mysql_user, $mysql_pass);
 mysqli_query($conn, "SET NAMES utf8");
 mysqli_select_db($conn, $mysql_db);
-
-
 
 
 $sql = "CREATE TABLE IF NOT EXISTS onus (`olt` INT UNSIGNED, `name` varchar(16) DEFAULT NULL,   `mac` varchar(18) UNIQUE,   `code` varchar(256) DEFAULT NULL, `dist` varchar(16) DEFAULT NULL, `pwr` varchar(16) DEFAULT NULL, `last_pwr` varchar(16) DEFAULT NULL, `last_activity` varchar(24) DEFAULT NULL, `lat` varchar(16) DEFAULT NULL, `lon` varchar(16) DEFAULT NULL, `comments` varchar(256) DEFAULT NULL, `type` varchar(10) DEFAULT NULL)";

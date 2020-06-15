@@ -2,7 +2,7 @@ SPLITTERS
 <br/>
 <br/>
 <br/>
-<font size=3>
+<font size="3">
 
 <table border="0px" cellspacing="10">
 <tr><td>1x2 - 3.17dB</td><td></td><td>1x4 - 7.4dB</td><td></td><td>1x8 - 10.7dB</td></tr>

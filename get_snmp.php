@@ -3,10 +3,7 @@ include 'vars.php';
 $extra = 'index.php';
 if ($table == NULL) {
 $table = $_GET["olt"];
-} else {
 }
-
-
 
 $ip = str_replace ("_", ".", $table);
 

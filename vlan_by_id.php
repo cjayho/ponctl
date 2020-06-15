@@ -1,11 +1,9 @@
 <?php
 $pvid = GetPVID($ip, $ro, $iface, $port);
-if ($pvid == NULL) {
-} else {
+if ($pvid != NULL){
 
 if ($pvid == 1) {
 $pvid = "default";
-} else {
 }
 
 

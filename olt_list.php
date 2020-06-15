@@ -1,9 +1,9 @@
-<font size=5>
+<font size="5">
 Список OLT
 </font>
 <br/>
 <br/>
-<font size=4>
+<font size="4">
 <?php
 include 'vars.php';
 $extra = 'index.php';

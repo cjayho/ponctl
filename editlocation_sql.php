@@ -1,7 +1,7 @@
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'lfgj[eqnfrbcnfdm';
+$dbpass = 'lfgj[eqnfrbcnfdm'; // cjayho: wtf?!
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $olt = $_GET["olt"];
@@ -20,13 +20,12 @@ if(! $conn )
 if(! get_magic_quotes_gpc() )
 {
    $latlongmet = addslashes ($_POST['latlongmet']);
-
 }
 else
 {
    $latlongmet = $_POST['latlongmet'];
-
 }
+
 $lat = substr($latlongmet, 0, -8);
 $lon = substr($latlongmet, 8);
 

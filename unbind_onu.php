@@ -25,8 +25,7 @@ include 'make_bdcom_mac.php';
     sleep(1);
 
 
-  if ($enable_pass == NULL) {
-} else {
+  if ($enable_pass != NULL){
     $enable_password = "$enable_pass";
     $en_pass = $enable_password."\r\n";
     fwrite($con, $en_pass);

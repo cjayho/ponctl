@@ -5,13 +5,9 @@ $mac_mark = str_replace(':','_',$mac);
 
 $mark = $olt_mark.$mac_mark;
 
-
-
 if ($twirl_color == NULL) {
 $twirl_color = "black";
-} else {
 }
-
 
  ?>
 

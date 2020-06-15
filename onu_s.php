@@ -15,7 +15,6 @@ echo "измерений</font><br/><br/><div align=\"center\">";
 
 if ($count==NULL) {
 $count=50;
-} else {
 }
 
 $conn = mysqli_connect($mysql_host, $mysql_user, $mysql_pass);

@@ -77,12 +77,15 @@ return $link_state;
 // ---------- Get iface number on OLT by MAC ONU ----------
 function IfaceByMac($ip, $ro, $mac) {
 $mac_spaced = str_replace(':',' ',$mac);
+/*
 $mac_spaced = str_replace('a','A',$mac_spaced);
 $mac_spaced = str_replace('b','B',$mac_spaced);
 $mac_spaced = str_replace('c','C',$mac_spaced);
 $mac_spaced = str_replace('d','D',$mac_spaced);
 $mac_spaced = str_replace('e','E',$mac_spaced);
-$mac_spaced = str_replace('f','F',$mac_spaced);
+$mac_spaced = str_replace('f','F',$mac_spaced); /**/ // cjayho: use strtolower, luke!
+
+$mac_spaced = strtolower( $mac_spaced );
 
 $Array_descr = snmprealwalk($ip, $ro, ".1.3.6.1.4.1.3320.101.10.1.1.3");
 
@@ -208,6 +211,7 @@ function NameIntAddZero($nameint) {
 $end = end(explode(':', $nameint));
 $count = strlen($end);
 if ($count == 1){
+/*
 $nameint = str_replace (":1", ":01", $nameint);
 $nameint = str_replace (":2", ":02", $nameint);
 $nameint = str_replace (":3", ":03", $nameint);
@@ -216,8 +220,9 @@ $nameint = str_replace (":5", ":05", $nameint);
 $nameint = str_replace (":6", ":06", $nameint);
 $nameint = str_replace (":7", ":07", $nameint);
 $nameint = str_replace (":8", ":08", $nameint);
-$nameint = str_replace (":9", ":09", $nameint);
+$nameint = str_replace (":9", ":09", $nameint); /**/ //cjayho: use preg_replace luke!
 
+$nameint = preg_replace( "/:(\d)/", ":0$1", $nameint);
 }
 return $nameint;
 }

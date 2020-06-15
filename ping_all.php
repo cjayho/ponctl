@@ -23,8 +23,8 @@ $ro = $row['ro'];
 $ip = long2ip($sql_ip);
 include 'ping.php';
 
-if ($ping == 0) {
-} else {
+if ($ping != 0)
+{
 
 $sql_req = "UPDATE olts SET last_act=\"$date\" WHERE ip='$sql_ip'";
 $retval_ping = mysqli_query( $conn, $sql_req );
